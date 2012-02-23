@@ -1,0 +1,36 @@
+[user]
+    email = ilmalteo@gmail.com
+    name = Matteo \"malteo\" Giordano
+[push]
+    default = current
+[core]
+    excludesfile = ~/.gitexcludes
+    editor = vim
+[help]
+    autocorrect = 20
+[color]
+    ui = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow 
+    frag = magenta 
+    old = red 
+    new = green 
+    whitespace = red reverse
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
+    pl = pull
+    ps = push
+    timeline = log --graph \"--pretty=format:%C(192)%h%Creset by %C(bold 239)%an%Creset (%ar)%C(182)%d%Creset%n%s%n%b\" --all    

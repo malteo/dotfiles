@@ -1,0 +1,19 @@
+!-------------------------------------------------------------------------------
+!
+!   U R X V T - Settings
+!
+URxvt*geometry:         132x43
+URxvt*borderLess:       false
+URxvt*depth:            32
+URxvt*scrollBar:        false
+URxvt*font:             xft:Inconsolata:size=10
+URxvt*boldFont:         xft:Inconsolata:size=10
+URxvt*cursorBlink:      true
+URxvt*cursorUnderline:  true
+URxvt*scrollColor:      #111111
+URxvt*perl-ext-common:  default,tabbed
+URxvt*iconFile:         /usr/share/icons/Faenza/apps/scalable/utilities-terminal.svg
+URxvt.tabbed.tabbar-fg: 8
+URxvt.tabbed.tabbar-bg: 11
+URxvt.tabbed.tab-fg:    11
+URxvt.tabbed.tab-bg:    8

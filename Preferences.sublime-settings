@@ -1,0 +1,7 @@
+{
+    "color_scheme":             "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+    "translate_tabs_to_spaces": true,
+    "rulers":                   [100],
+    "theme":                    "Soda Light.sublime-theme",
+    "font_face":                "Monaco"
+}
