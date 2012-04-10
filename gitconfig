@@ -25,7 +25,7 @@
     changed = green
     untracked = cyan
 [alias]
-    st = status
+    st = status -s
     ci = commit
     br = branch
     co = checkout
@@ -34,3 +34,5 @@
     pl = pull
     ps = push
     timeline = log --graph \"--pretty=format:%C(192)%h%Creset by %C(bold 239)%an%Creset (%ar)%C(182)%d%Creset%n%s%n%b\" --all    
+    stag = add -u
+    unstag = reset HEAD --
