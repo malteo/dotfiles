@@ -34,6 +34,4 @@ plugins=(git archlinux vi-mode history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/home/malte/Applicazioni/android-sdk-linux_86/tools:/home/malte/Applicazioni/android-sdk-linux_86/platform-tools:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/jboss/bin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/vendor_perl:/usr/bin/core_perl
-
 eval `dircolors ~/.dircolors`
