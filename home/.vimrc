@@ -121,7 +121,8 @@ set list listchars=tab:\ \ ,trail:·
     nmap <Leader>gd :Gdiff<CR>
 " }}}
 
-" Python {{{
-"    autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-"    autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
+" Use local vimrc if available {{{
+    if filereadable(expand("~/.vimrc.local"))
+        source ~/.vimrc.local
+    endif
 " }}}
