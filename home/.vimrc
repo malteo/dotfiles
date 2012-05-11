@@ -1,72 +1,127 @@
+" vim:fdm=marker
 call pathogen#infect()
 
-"Forget compatibility with Vi. Who cares!
+" Forget compatibility with Vi. Who cares.
 set nocompatible
 
-"Enable filetypes
+" Enable filetypes
 filetype on
 filetype plugin on
 filetype indent on
 syntax on
 
-"Display current cursor position in lower right corner
+" Display current cursor position in lower right corner
 set ruler
 
-"Switch between buffers without saving
+" Want a different map leader than \
+let mapleader = ","
+
+" Ever notice a slight lag after typing the leader key + command? This lowers
+" the timeout.
+set timeoutlen=500
+
+" Switch between buffers without saving
 set hidden
 
-"Set the color scheme
-set background=dark
-colorscheme solarized
+" Set font type and size. Depends on the resolution. Larger screens, prefer h15
+set guifont=Inconsolata\ 12
 
-"Tab stuff
+" Tab stuff
 set tabstop=4
+set shiftwidth=4
 set softtabstop=4
 set expandtab
-set shiftwidth=4
 
-"Show command in bottom right portion of the screen
+" Show command in bottom right portion of the screen
 set showcmd
 
-"Show lines numbers
+" Show lines numbers
 set number
 
-"Prefer relative line numbering?
-"set relativenumber"
-
-"Indent stuff
+" Indent stuff
 set smartindent
 set autoindent
 
-"Always show the status line
+" Always show the status line
 set laststatus=2
 
-"Prefer a slightly higher line height
-"set linespace=3
-
-"Better line wrapping
-set wrap
-set textwidth=99
-set formatoptions=qrn1
-
-"Set incremental searching"
+" Set incremental searching"
 set incsearch
 
-"Highlight searching
+" Highlight searching
 set hlsearch
 
-" case insensitive search
+" Case insensitive search
 set ignorecase
 set smartcase
 
-"Enable code folding
+" Enable code folding
 set foldenable
 
-"Hide mouse when typing
+" Hide mouse when typing
 set mousehide
 
-"Highlight current line
+" Easier window navigation
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+" Stupid shift key fixes
+cmap W w
+cmap WQ wq
+cmap wQ wq
+cmap Q q
+
+" Visual shifting (does not exit Visual mode)
+vnoremap < <gv
+vnoremap > >gv
+
+" Highlight current line
 set cursorline
 
-autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
+" Display tabs and trailing spaces visually
+set list listchars=tab:\ \ ,trail:·
+
+" Omnicomplete {{{
+    inoremap <C-space> <C-x><C-o>
+
+    autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+    autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+    autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+" }}}
+
+" Plugins {{{
+    " CtrlP
+    set wildignore+=*/tmp/*,*.pyc,*.swp,*.zip
+    let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+
+    " NERDTree
+    nmap <Leader>nn :NERDTreeToggle<CR>
+    let NERDTreeIgnore     = ['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+    let NERDTreeQuitOnOpen = 1
+
+    " Tagbar
+    nmap <Leader>tt :TagbarToggle<CR>
+    let g:tagbar_autofocus = 1
+
+    " Solarized
+    if has('gui_running')
+        set background=light
+    else
+        set background=dark
+    endif
+
+    colorscheme solarized
+
+    " Fugitive
+    nmap <Leader>gs :Gstatus<CR>
+    nmap <Leader>gd :Gdiff<CR>
+" }}}
+
+" Python {{{
+"    autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+"    autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
+" }}}
