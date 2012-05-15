@@ -45,6 +45,11 @@ set autoindent
 " Always show the status line
 set laststatus=2
 
+" Better line wrapping
+set wrap
+set textwidth=79
+"set colorcolumn=+1
+
 " Set incremental searching"
 set incsearch
 
@@ -57,6 +62,8 @@ set smartcase
 
 " Enable code folding
 set foldenable
+set foldlevel=99
+set foldmethod=indent
 
 " Hide mouse when typing
 set mousehide
@@ -100,7 +107,7 @@ set list listchars=tab:\ \ ,trail:·
 
     " NERDTree
     nmap <Leader>nn :NERDTreeToggle<CR>
-    let NERDTreeIgnore     = ['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+    let NERDTreeIgnore     = ['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', '^tags$']
     let NERDTreeQuitOnOpen = 1
 
     " Tagbar
