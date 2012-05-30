@@ -90,6 +90,10 @@ set cursorline
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 
+" Backup and swap files
+set backupdir=~/.vim/_backup//    " where to put backup files.
+set directory=~/.vim/_temp//      " where to put swap files.
+
 " Omnicomplete {{{
     inoremap <C-space> <C-x><C-o>
 
