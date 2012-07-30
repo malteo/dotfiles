@@ -68,6 +68,16 @@ set foldmethod=indent
 " Hide mouse when typing
 set mousehide
 
+" Highlight current line
+set cursorline
+
+" Display tabs and trailing spaces visually
+set list listchars=tab:\ \ ,trail:·
+
+" Backup and swap files
+set backupdir=~/.vim/_backup//    " where to put backup files.
+set directory=~/.vim/_temp//      " where to put swap files.
+
 " Easier window navigation
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
@@ -84,15 +94,8 @@ cmap Q q
 vnoremap < <gv
 vnoremap > >gv
 
-" Highlight current line
-set cursorline
-
-" Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
-
-" Backup and swap files
-set backupdir=~/.vim/_backup//    " where to put backup files.
-set directory=~/.vim/_temp//      " where to put swap files.
+" Move to last change
+nnoremap gI `.
 
 " Omnicomplete {{{
     inoremap <C-space> <C-x><C-o>
