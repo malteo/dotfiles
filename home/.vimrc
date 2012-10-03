@@ -23,9 +23,6 @@ set timeoutlen=500
 " Switch between buffers without saving
 set hidden
 
-" Set font type and size. Depends on the resolution. Larger screens, prefer h15
-set guifont=Inconsolata\ 12
-
 " Tab stuff
 set tabstop=4
 set shiftwidth=4
@@ -96,6 +93,20 @@ vnoremap > >gv
 
 " Move to last change
 nnoremap gI `.
+
+" MacVim {{{
+    set guifont=Monaco:h14
+
+    set lines=60
+    set columns=190
+
+    " Disable the scrollbars (NERDTree)
+    set guioptions-=r
+    set guioptions-=L
+
+    " Disable the macvim toolbar
+    set guioptions-=T
+" }}}
 
 " Omnicomplete {{{
     inoremap <C-space> <C-x><C-o>
