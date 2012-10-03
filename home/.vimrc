@@ -113,7 +113,8 @@ nnoremap gI `.
     let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
     " NERDTree
-    nmap <Leader>nn :NERDTreeToggle<CR>
+    nmap <Leader>nt :NERDTreeToggle<CR>
+    nmap <Leader>nf :NERDTreeFind<CR>
     let NERDTreeIgnore     = ['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr', '^tags$']
     let NERDTreeQuitOnOpen = 1
 
