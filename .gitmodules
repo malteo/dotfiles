@@ -43,3 +43,6 @@
 [submodule "home/.vim/bundle/gundo"]
 	path = home/.vim/bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
+[submodule "home/.vim/bundle/CSScomb"]
+	path = home/.vim/bundle/CSScomb
+	url = https://github.com/miripiruni/CSScomb-for-Vim.git

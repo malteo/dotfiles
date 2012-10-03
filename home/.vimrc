@@ -145,6 +145,9 @@ nnoremap gI `.
     " Fugitive
     nmap <Leader>gs :Gstatus<CR>
     nmap <Leader>gd :Gdiff<CR>
+
+    " CSScomb
+    autocmd FileType css autocmd BufWritePre <buffer> :CSSComb
 " }}}
 
 " Use local vimrc if available {{{
