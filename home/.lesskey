@@ -1,0 +1,5 @@
+#env
+LESS       = -F -i -M -R -X
+
+#command
+s            invalid
