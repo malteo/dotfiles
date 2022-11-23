@@ -1,0 +1,9 @@
+[submodule ".vim/pack/plugins/start/vim-airline"]
+	path = .vim/pack/plugins/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule ".vim/pack/plugins/start/quick-scope"]
+	path = .vim/pack/plugins/start/quick-scope
+	url = https://github.com/unblevable/quick-scope
+[submodule ".vim/pack/plugins/start/dracula"]
+	path = .vim/pack/plugins/start/dracula
+	url = https://github.com/dracula/vim
