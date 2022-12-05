@@ -7,10 +7,10 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(
   asdf
-  autojump
   git
   k
   ssh-agent
+  zoxide
   zsh-autosuggestions
 )
 
