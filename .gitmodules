@@ -7,3 +7,6 @@
 [submodule ".vim/pack/plugins/start/dracula"]
 	path = .vim/pack/plugins/start/dracula
 	url = https://github.com/dracula/vim
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
