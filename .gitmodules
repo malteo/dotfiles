@@ -10,3 +10,12 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule ".zsh-custom/themes/agkozak"]
+	path = .zsh-custom/themes/agkozak
+	url = https://github.com/agkozak/agkozak-zsh-prompt
+[submodule ".zsh-custom/plugins/k"]
+	path = .zsh-custom/plugins/k
+	url = https://github.com/supercrabtree/k
+[submodule ".zsh-custom/plugins/zsh-autosuggestions"]
+	path = .zsh-custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions

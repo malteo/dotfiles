@@ -5,6 +5,8 @@ ZSH_THEME="agkozak"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+ZSH_CUSTOM="$HOME/.zsh-custom"
+
 plugins=(
   asdf
   git
@@ -19,7 +21,6 @@ zstyle :omz:plugins:ssh-agent lazy yes
 source $ZSH/oh-my-zsh.sh
 
 alias coins="python ~/dev/coinwatch/bin/coinwatch"
-alias dot="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias dcd="docker compose down"
 alias dcps="docker compose ps"
 alias dcu="docker compose up -d"
