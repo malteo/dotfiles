@@ -9,6 +9,7 @@ ZSH_CUSTOM="$HOME/.zsh-custom"
 
 plugins=(
   asdf
+  direnv
   git
   k
   ssh-agent
@@ -37,9 +38,6 @@ alias gs="git st"
 alias ls="lsd"
 #alias omw="portmod openmw"
 #alias ssh="TERM=xterm-color ssh"
-
-# direnv
-(( $+commands[direnv] )) && eval "$(direnv hook zsh)"
 
 # histdb
 if [ -d "$ZSH_CUSTOM/plugins/zsh-histdb" ]
