@@ -38,10 +38,3 @@ alias gs="git st"
 alias ls="lsd"
 #alias omw="portmod openmw"
 #alias ssh="TERM=xterm-color ssh"
-
-# histdb
-if [ -d "$ZSH_CUSTOM/plugins/zsh-histdb" ]
-then
-  source $HOME/.oh-my-zsh/custom/plugins/zsh-histdb/sqlite-history.zsh
-  autoload -Uz add-zsh-hook
-fi
