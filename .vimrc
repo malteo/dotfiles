@@ -59,18 +59,11 @@ let g:qs_highlight_on_keys = ['f', 'F']
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
-" lightline
-"let g:rigel_lightline = 1
-"let g:lightline = { 'colorscheme': 'nord' }
-
-" netrw
-let g:netrw_altfile = 1
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
-map <C-n> :Lexplore<CR>
+"NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 
 " Yoink
 "nmap <c-n> <plug>(YoinkPostPasteSwapBack)
