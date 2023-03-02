@@ -52,6 +52,14 @@ nnoremap <C-l> <C-w>l
 nnoremap <Tab>   :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 
+" Keep undo history across sessions, by storing it in a file.
+set undolevels=1000
+if has('persistent_undo')
+    silent !mkdir -p ~/.cache/vim/undo > /dev/null 2>&1
+    set undodir=~/.cache/vim/undo
+    set undofile
+endif
+
 " quick-scope
 let g:qs_highlight_on_keys = ['f', 'F']
 
