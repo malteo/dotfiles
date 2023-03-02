@@ -38,3 +38,6 @@ alias gs="git st"
 alias ls="lsd"
 #alias omw="portmod openmw"
 #alias ssh="TERM=xterm-color ssh"
+
+# rtx
+(( $+commands[rtx] )) && eval "$(rtx activate zsh)"
