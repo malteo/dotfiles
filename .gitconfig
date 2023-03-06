@@ -1,0 +1,31 @@
+[core]
+    excludesfile = ~/.gitignore_global
+[alias]
+    st = status -s
+    ls = "!f() { git log --decorate `git rev-parse --abbrev-ref origin/HEAD`..; }; f"
+    ll = log --decorate
+    timeline = log --graph \"--pretty=format:%C(192)%h%Creset by %C(bold 239)%an%Creset (%ar)%C(182)%d%Creset%n%s%n%b\" --all
+    graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
+    branches = branch -a
+    tags = tag
+    stashes = stash list
+    unstage = reset HEAD --
+    discard = restore --
+    amend = commit --amend --no-edit
+    fixup = "!f() { git commit --fixup=$1 ${@:2} && git rebase -i --autosquash $1^; }; f"
+    wip = "!f() { git add . && git commit -m WIP; }; f"
+[format]
+    pretty = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+[init]
+    defaultBranch = master
+[pull]
+    rebase = true
+[push]
+    default = current
+[rebase]
+    autoStash = true
+[user]
+    email = ilmalteo@gmail.com
+    name = Matteo Giordano
+[include]
+    path = ~/.gitconfig.local
