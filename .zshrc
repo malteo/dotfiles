@@ -8,7 +8,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_CUSTOM="$HOME/.zsh-custom"
 
 plugins=(
-  asdf
   direnv
   git
   k
