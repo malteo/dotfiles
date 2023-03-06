@@ -25,7 +25,6 @@
 [rebase]
     autoStash = true
 [user]
-    email = ilmalteo@gmail.com
     name = Matteo Giordano
 [include]
     path = ~/.gitconfig.local
