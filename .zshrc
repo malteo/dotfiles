@@ -10,6 +10,7 @@ ZSH_CUSTOM="$HOME/.zsh-custom"
 plugins=(
   direnv
   git
+  fzf
   k
   ssh-agent
   zoxide
