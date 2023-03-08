@@ -21,7 +21,6 @@ zstyle :omz:plugins:ssh-agent lazy yes
 
 source $ZSH/oh-my-zsh.sh
 
-alias coins="python ~/dev/coinwatch/bin/coinwatch"
 alias dcd="docker compose down"
 alias dcps="docker compose ps"
 alias dcu="docker compose up -d"
@@ -36,8 +35,8 @@ alias gpf="git push --force-with-lease"
 alias gpr="gh pr create"
 alias gs="git st"
 alias ls="lsd"
-#alias omw="portmod openmw"
-#alias ssh="TERM=xterm-color ssh"
 
 # rtx
 (( $+commands[rtx] )) && eval "$(rtx activate zsh)"
+
+[[ -r ~/.zshrc.local ]] && . ~/.zshrc.local
