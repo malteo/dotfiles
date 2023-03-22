@@ -39,4 +39,6 @@ alias ls="lsd"
 # rtx
 (( $+commands[rtx] )) && eval "$(rtx activate zsh)"
 
-[[ -r ~/.zshrc.local ]] && . ~/.zshrc.local
+if [[ -f ~/.zshrc.local ]]; then
+  . ~/.zshrc.local
+fi
