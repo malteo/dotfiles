@@ -8,6 +8,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_CUSTOM="$HOME/.zsh-custom"
 
 plugins=(
+  vi-mode
   direnv
   git
   fzf
