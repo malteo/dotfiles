@@ -25,14 +25,16 @@ set foldlevelstart=10        " open most folds by default
 set foldnestmax=10           " 10 nested fold max
 set foldmethod=indent        " fold based on indent level
 
-set ttymouse=sgr
-set mouse=a
-
 set nobackup
 set noswapfile
 set laststatus=2
 set updatetime=100
-set clipboard=unnamed,unnamedplus
+
+if !has('nvim')
+    set ttymouse=sgr
+    set mouse=a
+    set clipboard=unnamed,unnamedplus
+endif
 
 " space open/closes folds
 nnoremap <space> za
