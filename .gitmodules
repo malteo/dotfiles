@@ -22,3 +22,6 @@
 [submodule ".vim/pack/plugins/start/nerdtree"]
 	path = .vim/pack/plugins/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
+[submodule ".vim/pack/plugins/start/nvim-colorizer.lua"]
+	path = .vim/pack/plugins/start/nvim-colorizer.lua
+	url = https://github.com/NvChad/nvim-colorizer.lua.git
