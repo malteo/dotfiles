@@ -36,8 +36,8 @@ alias gpf="git push --force-with-lease"
 alias gpr="gh pr create"
 alias gs="git st"
 
-# lsd
-(( $+commands[lsd] )) && alias ls="lsd"
+# eza
+(( $+commands[eza] )) && alias ls="eza"
 
 # rtx
 (( $+commands[rtx] )) && eval "$(rtx activate zsh)"
