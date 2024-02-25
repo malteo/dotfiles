@@ -10,9 +10,6 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
-[submodule ".zsh-custom/themes/agkozak"]
-	path = .zsh-custom/themes/agkozak
-	url = https://github.com/agkozak/agkozak-zsh-prompt
 [submodule ".zsh-custom/plugins/k"]
 	path = .zsh-custom/plugins/k
 	url = https://github.com/supercrabtree/k
@@ -25,3 +22,6 @@
 [submodule ".vim/pack/plugins/start/nvim-colorizer.lua"]
 	path = .vim/pack/plugins/start/nvim-colorizer.lua
 	url = https://github.com/NvChad/nvim-colorizer.lua.git
+[submodule ".zsh-custom/themes/git-prompt.zsh"]
+	path = .zsh-custom/themes/git-prompt.zsh
+	url = https://github.com/woefe/git-prompt.zsh

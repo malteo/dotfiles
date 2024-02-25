@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="agkozak"
+ZSH_THEME="git-prompt"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
