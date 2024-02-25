@@ -18,6 +18,8 @@
     pretty = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
 [init]
     defaultBranch = master
+[merge]
+    conflictStyle = zdiff3
 [pull]
     rebase = true
 [push]
