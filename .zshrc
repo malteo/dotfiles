@@ -7,12 +7,20 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 ZSH_CUSTOM="$HOME/.zsh-custom"
 
+function get_cluster_short() {
+  echo "$1" | cut -d / -f2
+}
+
+KUBE_PS1_SYMBOL_PADDING=true
+KUBE_PS1_CLUSTER_FUNCTION=get_cluster_short
+
 plugins=(
-  vi-mode
   direnv
+  gh
   git
-  fzf
   k
+  kube-ps1
+  mise
   ssh-agent
   zoxide
   zsh-autosuggestions
@@ -21,6 +29,8 @@ plugins=(
 zstyle :omz:plugins:ssh-agent lazy yes
 
 source $ZSH/oh-my-zsh.sh
+
+RPROMPT='$(kube_ps1)'
 
 alias dcd="docker compose down"
 alias dcps="docker compose ps"
@@ -39,8 +49,12 @@ alias gs="git st"
 # eza
 (( $+commands[eza] )) && alias ls="eza"
 
-# rtx
-(( $+commands[rtx] )) && eval "$(rtx activate zsh)"
+# atuin
+(( $+commands[atuin] )) && eval "$(atuin init zsh --disable-up-arrow)"
+
+function jwt-decode {
+  jq -R 'split(".") |.[0:2] | map(@base64d) | map(fromjson)' <<< $1
+}
 
 if [[ -f ~/.zshrc.local ]]; then
   . ~/.zshrc.local
