@@ -7,10 +7,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 ZSH_CUSTOM="$HOME/.zsh-custom"
 
-function get_cluster_short() {
-  echo "$1" | cut -d / -f2
-}
-
 KUBE_PS1_SYMBOL_PADDING=true
 KUBE_PS1_CLUSTER_FUNCTION=get_cluster_short
 
@@ -51,10 +47,6 @@ alias gs="git st"
 
 # atuin
 (( $+commands[atuin] )) && eval "$(atuin init zsh --disable-up-arrow)"
-
-function jwt-decode {
-  jq -R 'split(".") |.[0:2] | map(@base64d) | map(fromjson)' <<< $1
-}
 
 if [[ -f ~/.zshrc.local ]]; then
   . ~/.zshrc.local
