@@ -14,6 +14,8 @@
     amend = commit --amend --no-edit
     fixup = "!f() { git commit --fixup=$1 ${@:2} && git rebase -i --autosquash $1^; }; f"
     wip = "!f() { git add . && git commit -m WIP; }; f"
+[credential]
+    helper = /usr/lib/git-core/git-credential-libsecret
 [format]
     pretty = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
 [init]
