@@ -75,4 +75,6 @@ let g:fern#default_hidden = 1
 nnoremap <C-n> :Fern .<CR>
 nnoremap <C-f> :Fern %:h -reveal=%:p<CR>
 
-source ~/.vimrc.local
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
