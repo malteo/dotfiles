@@ -1,12 +1,6 @@
-[submodule ".vim/pack/plugins/start/vim-airline"]
-	path = .vim/pack/plugins/start/vim-airline
-	url = https://github.com/vim-airline/vim-airline
 [submodule ".vim/pack/plugins/start/quick-scope"]
 	path = .vim/pack/plugins/start/quick-scope
 	url = https://github.com/unblevable/quick-scope
-[submodule ".vim/pack/plugins/start/dracula"]
-	path = .vim/pack/plugins/start/dracula
-	url = https://github.com/dracula/vim
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
@@ -16,12 +10,15 @@
 [submodule ".zsh-custom/plugins/zsh-autosuggestions"]
 	path = .zsh-custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule ".vim/pack/plugins/start/nerdtree"]
-	path = .vim/pack/plugins/start/nerdtree
-	url = https://github.com/preservim/nerdtree.git
-[submodule ".vim/pack/plugins/start/nvim-colorizer.lua"]
-	path = .vim/pack/plugins/start/nvim-colorizer.lua
-	url = https://github.com/NvChad/nvim-colorizer.lua.git
 [submodule ".zsh-custom/themes/git-prompt.zsh"]
 	path = .zsh-custom/themes/git-prompt.zsh
 	url = https://github.com/woefe/git-prompt.zsh
+[submodule ".vim/pack/plugins/start/rosepine"]
+	path = .vim/pack/plugins/start/rosepine
+	url = https://github.com/rose-pine/vim
+[submodule ".vim/pack/plugins/start/lightline.vim"]
+	path = .vim/pack/plugins/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+[submodule ".vim/pack/plugins/start/fern.vim"]
+	path = .vim/pack/plugins/start/fern.vim
+	url = https://github.com/lambdalisue/vim-fern.git

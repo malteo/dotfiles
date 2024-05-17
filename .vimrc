@@ -3,7 +3,7 @@ set nocompatible             " be iMproved
 set termguicolors 
 
 syntax enable                " enable syntax processing
-colorscheme dracula          " enable the theme
+colorscheme rosepine         " enable the theme
 hi Normal guibg=NONE ctermbg=NONE
 
 set tabstop=4                " number of visual spaces per TAB
@@ -17,6 +17,8 @@ set wildmenu                 " visual autocomplete for command menu
 set lazyredraw               " redraw only when we need to.
 set showmatch                " highlight matching [{()}]
 
+set ignorecase
+set smartcase
 set incsearch                " search as characters are entered
 set hlsearch                 " highlight matches
 
@@ -50,9 +52,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-" cycling through listed buffers
-nnoremap <Tab>   :bnext<CR>
-nnoremap <S-Tab> :bprevious<CR>
+" cycling through listed ~buffers~ tabs
+nnoremap <Tab>   :tabnext<CR>
+nnoremap <S-Tab> :tabprevious<CR>
 
 " Keep undo history across sessions, by storing it in a file.
 set undolevels=1000
@@ -65,21 +67,12 @@ endif
 " quick-scope
 let g:qs_highlight_on_keys = ['f', 'F']
 
-" airline
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+" lightline
+let g:lightline = { 'colorscheme': 'rosepine' }
 
-"NERDTree
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+" Fern
+let g:fern#default_hidden = 1
+nnoremap <C-n> :Fern .<CR>
+nnoremap <C-f> :Fern %:h -reveal=%:p<CR>
 
-" Yoink
-"nmap <c-n> <plug>(YoinkPostPasteSwapBack)
-"nmap <c-p> <plug>(YoinkPostPasteSwapForward)
-"map p <plug>(YoinkPaste_p)
-"nmap P <plug>(YoinkPaste_P)
-
-" get the 2-space YAML as the default when hit carriage return after the colon
-"autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+source ~/.vimrc.local
