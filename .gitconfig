@@ -30,3 +30,5 @@
     name = Matteo Giordano
 [include]
     path = ~/.gitconfig.local
+[advice]
+    detachedHead = false
