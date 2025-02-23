@@ -1,34 +1,60 @@
-[core]
-    excludesfile = ~/.gitignore_global
-[alias]
-    st = status -s
-    ls = "!f() { git log --decorate `git rev-parse --abbrev-ref origin/HEAD`..; }; f"
-    ll = log --decorate
-    timeline = log --graph \"--pretty=format:%C(192)%h%Creset by %C(bold 239)%an%Creset (%ar)%C(182)%d%Creset%n%s%n%b\" --all
-    graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
-    branches = branch -a
-    tags = tag
-    stashes = stash list
-    unstage = reset HEAD --
-    discard = restore --
-    amend = commit --amend --no-edit
-    fixup = "!f() { git commit --fixup=$1 ${@:2} && git rebase -i --autosquash $1^; }; f"
-    wip = "!f() { git add . && git commit -m WIP; }; f"
-[format]
-    pretty = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
-[init]
-    defaultBranch = master
-[merge]
-    conflictStyle = zdiff3
-[pull]
-    rebase = true
-[push]
-    default = current
-[rebase]
-    autoStash = true
-[user]
-    name = Matteo Giordano
-[include]
-    path = ~/.gitconfig.local
 [advice]
-    detachedHead = false
+	detachedHead = false
+[alias]
+	amend = commit --amend --no-edit
+	branches = branch -a
+	discard = restore --
+	fixup = "!f() { git commit --fixup=$1 ${@:2} && git rebase -i --autosquash $1^; }; f"
+	graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
+	ll = log --decorate
+	ls = "!f() { git log --decorate `git rev-parse --abbrev-ref origin/HEAD`..; }; f"
+	stashes = stash list
+	st = status -s
+	tags = tag
+	timeline = log --graph \"--pretty=format:%C(192)%h%Creset by %C(bold 239)%an%Creset (%ar)%C(182)%d%Creset%n%s%n%b\" --all
+	unstage = reset HEAD --
+	wip = "!f() { git add . && git commit -m WIP; }; f"
+[branch]
+	sort = -committerdate
+[column]
+	ui = auto
+[commit]
+	verbose = true
+[core]
+	excludesfile = ~/.gitignore_global
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[fetch]
+	all = true
+	pruneTags = true
+	prune = true
+[format]
+	pretty = %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+[help]
+	autocorrect = prompt
+[include]
+	path = ~/.gitconfig.local
+[init]
+	defaultBranch = master
+[merge]
+	conflictStyle = zdiff3
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+	default = current
+	followTags = true
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+[rerere]
+	autoupdate = true
+	enabled = true
+[tag]
+	sort = version:refname
+[user]
+	name = Matteo Giordano

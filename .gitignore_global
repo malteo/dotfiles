@@ -1,4 +1,6 @@
-.env
-.envrc
+.coverage
+.env.local
+*.iml
 .idea/
+.ropeproject/
 venv/
